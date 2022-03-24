@@ -1,0 +1,4 @@
+# Andrey A. Markov's model for Eugene Onegin (by Pushkin) - depicted in Snell, page 465
+# solution = [ ]
+0.128 0.872
+.663 .337
