@@ -1,5 +1,9 @@
 # Book: "Markov Chains for programmers"
-This book was published by Self Publishers Worldwide (another publication by the _lazy panda_ collection), Ricardo M. Czekster, in April/2022. I hope you enjoy it reading as much as I've enjoyed crafting paragraphs and coding it.
+This book was published by Self Publishers Worldwide (another publication by the _lazy panda_ collection), and authored by Ricardo M. Czekster.
+
+The first edition was out in 01/April/2022, April Fools day. 
+
+I hope you enjoy it reading as much as I've enjoyed crafting paragraphs and coding it.
 
 You will find here supporting materials for the book I have written about Markov Chains (MC), which you may also [download here](MC-for-programmers2022.pdf).
 
