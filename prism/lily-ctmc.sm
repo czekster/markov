@@ -1,0 +1,19 @@
+// Lily Pad model (frog in the pond) - CTMC
+
+ctmc
+
+const int N=4; // N - number of states
+
+const int sA=0;
+const int sB=1;
+const int sC=2;
+const int sD=3;
+
+module Module1	
+	n : [0..N] init sA; // total states, initial state sA
+	// transitions
+	[] (n=sA) -> 11 : (n'=sB) + 6 : (n'=sC) + 1 : (n'=sD);
+	[] (n=sB) -> 2 : (n'=sD) + 9 : (n'=sC) + 9 : (n'=sA);
+	[] (n=sC) -> 2 : (n'=sB) + 8 : (n'=sA) + 3 : (n'=sD);
+	[] (n=sD) -> 5 : (n'=sA) + 7 : (n'=sB) + 2 : (n'=sC);
+endmodule
