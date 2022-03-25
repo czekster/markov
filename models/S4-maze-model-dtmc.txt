@@ -1,6 +1,7 @@
 # Maze Model: state order 1 2 | 4 3  - representing a 2x2 grid of cells
 # based from: Introduction to Probability, by Charles Miller Grinstead and J. Laurie Snell, Chapter 11, page 440
 # solution: w = [ 0.25 0.25 0.25 0.25 ]
+# state semantics: [ 1 2 3 4 ]
 # 1  =  2
 # ||    ||
 # 4  =  3 

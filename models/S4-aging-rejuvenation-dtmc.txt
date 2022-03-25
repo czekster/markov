@@ -1,5 +1,5 @@
 # Aging and Rejuvenation model
-# state space formation: S0 SF SP SR
+# state semantics: [ S0 SF SP SR ]
 0.998015873 0 0.001984127 0
 0.666666667 0.333333333 0 0
 0 3.85802E-05 0.997977293 0.001984127

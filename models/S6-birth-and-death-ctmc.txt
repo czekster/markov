@@ -2,6 +2,7 @@
 # Extracted from Columbia University Notes on Continuous Time Markov Chains (by Ward Whitt), Dec 4, 2013, page 19
 # link: http://www.columbia.edu/~ww2040/6711F13/CTMCnotes120413.pdf
 # solution = [ 0.179334501 0.269001751 0.201751313 0.151313485 0.113485114 0.085113835 ]
+# state semantics: [ 0 1 2 3 ]
 0 6 0 0 0 0
 4 0 6 0 0 0
 0 8 0 6 0 0

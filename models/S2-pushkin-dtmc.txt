@@ -1,4 +1,5 @@
 # Andrey A. Markov's model for Eugene Onegin (by Pushkin) - depicted in Snell, page 465
+# state semantics: [ vowel consonant ]
 # solution = [ 0.431921825	0.568078175 ]
 0.128 0.872
 .663 .337
