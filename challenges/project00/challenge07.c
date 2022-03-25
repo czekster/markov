@@ -21,14 +21,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // main function
 int main(int argc, char *argv[]) {
    if (argc != 3) {
-      printf("Usage: challenge07 <FILE> <TIME>\n");
+      printf("Usage: challenge07 <CTMC-MODEL> <TIME>\n");
       exit(1);
    }
    char* filename = (char*)malloc(sizeof(char)*strlen(argv[1])+1);
    strcpy(filename, argv[1]);
    float sim_time = atof(argv[2]);
    if (sim_time <= 0) {
-      printf("Usage: challenge07 <FILE> <TIME>\n");
+      printf("Usage: challenge07 <CTMC-MODEL> <TIME>\n");
       printf("<TIME> parameter must be >0.\nTry again.\n");
       exit(1);
    }
