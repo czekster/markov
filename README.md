@@ -41,6 +41,8 @@ The following models are available (they were named **S**N where N is the number
 - `S2-pushkin-dtmc.txt`: The pushkin model developed by A. A. Markov (according to Snell's book);
 - `S3-land-of-oz-dtmc.txt`: The land of oz model;
 - `S3-weather-belfast-dtmc.txt`: The Belfast weather model (by Stewart);
+- `S4-aging-rejuvenation-ctmc`: Software aging and rejuvenation model, CTMC;
+- `S4-aging-rejuvenation-dtmc`: Same (aging & rej), DTMC version;
 - `S4-generic-ctmc.txt`: The Generic model;
 - `S4-lilypad-ctmc.txt`: The Lily Pad model (frog in the pond);
 - `S4-maze-model-dtmc.txt`: The Mouse Maze model;

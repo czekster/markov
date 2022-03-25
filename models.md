@@ -32,11 +32,15 @@ The Lily Pad model (frog in the pond).
 
 ![Lily Pad model!](images/lilypad.png)
 
+# S4-aging-rejuvenation-ctmc.txt
+Software Aging and Rejuvenation model (CTMC).
+
+![Software Aging and Rejuvenation!](images/aging-rejuvenation.png)
+
 # S4-maze-model-dtmc.txt
 The Mouse Maze model.
 
 ![Mouse Maze model!](images/mouse-maze.png)
-
 
 # S5-ehrenfest-dtmc.txt
 The Ehrenfest model.
