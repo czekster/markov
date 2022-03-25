@@ -21,7 +21,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // main function
 int main(int argc, char *argv[]) {
    if (argc != 2) {
-      printf("Usage: challenge06 <FILE>\n");
+      printf("Usage: challenge06 <CTMC-MODEL>\n");
       exit(1);
    }
    char* filename = (char*)malloc(sizeof(char)*strlen(argv[1])+1);

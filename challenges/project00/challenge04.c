@@ -21,15 +21,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // main function
 int main(int argc, char *argv[]) {
    if (argc != 3) {
-      printf("Usage: challenge04 <FILE> <OP>\n");
+      printf("Usage: challenge04 <DTMC-MODEL> <OP>\n");
+      printf(" OP=0 - Power Matrix method\n OP=1 - Vector-Matrix Multiplication method\n");
       exit(1);
    }
    char* filename = (char*)malloc(sizeof(char)*strlen(argv[1])+1);
    strcpy(filename, argv[1]);
    int op = atoi(argv[2]);
    if (op != 0 && op != 1) {
-      printf("Usage: challenge04 <FILE> <OP>\n");
+      printf("Usage: challenge04 <DTMC-MODEL> <OP>\n");
       printf("<OP> parameter must be 0 or 1.\nTry again.\n");
+      printf(" OP=0 - Power Matrix method\n OP=1 - Vector-Matrix Multiplication method\n");
       exit(1);
    }
    printf("Working with file: %s\n", filename);

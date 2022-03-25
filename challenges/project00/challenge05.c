@@ -21,14 +21,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 // main function
 int main(int argc, char *argv[]) {
    if (argc != 3) {
-      printf("Usage: challenge05 <FILE> <SAMPLES>\n");
+      printf("Usage: challenge05 <DTMC-MODEL> <SAMPLES>\n");
       exit(1);
    }
    char* filename = (char*)malloc(sizeof(char)*strlen(argv[1])+1);
    strcpy(filename, argv[1]);
    int samples = atoi(argv[2]);
    if (samples <= 0 || samples > 500000) {
-      printf("Usage: challenge05 <FILE> <SAMPLES>\n");
+      printf("Usage: challenge05 <DTMC-MODEL> <SAMPLES>\n");
       printf("<SAMPLES> parameter must be >0 and <500000.\nTry again.\n");
       exit(1);
    }
