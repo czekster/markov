@@ -1,3 +1,3 @@
 # Models
 
-Please, refer to page [Models](models.md).
+Please, refer to page [Models](../models.md).
