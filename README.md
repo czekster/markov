@@ -7,6 +7,8 @@ I hope you enjoy it reading as much as I've enjoyed crafting paragraphs and codi
 
 You will find here supporting materials for the book I have written about Markov Chains (MC), which you may also [download here](MC-for-programmers2022.pdf).
 
+This book is a companion to [the paper I wrote about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems) a while ago, published as a pre-print in [my ResearchGate profile](https://www.researchgate.net/profile/Ricardo-Czekster).
+
 ## License
 The book is under Creative Commons (CC BY 4.0) and the code is under GPLv3.
 
