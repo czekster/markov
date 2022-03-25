@@ -1,0 +1,10 @@
+# state space formation: S0 SF SP SR
+# lambda = 1/(12*30*24) = 0.000115741 --> MTBF is 12 months
+# r1 = 2 --> it takes 7 days to recover from an unexpected failure
+# r2 = 1/(7*24) = 0.005952381 --> this is the base longevity interval (from S0 to SP), equal to 7 days
+# r3 = 3 --> the mean repair time after rejuvenation is 20 min
+# r4 = 1/((14-7)*24) = 0.005952381
+0 0 0.005952381 0
+2 0 0 0
+0 0.000115741 0 0.005952381
+3 0 0 0
