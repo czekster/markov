@@ -1,4 +1,4 @@
-# State order: A B C D
+# state semantics: [ A B C D ]
 0 11 6 1
 9 0 9 2
 8 2 0 3

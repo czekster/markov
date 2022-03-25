@@ -1,5 +1,5 @@
 # Aging and Rejuvenation model
-# state space formation: S0 SF SP SR
+# state semantics: [ S0 SF SP SR ]
 # lambda = 1/(12*30*24) = 0.000115741 --> MTBF is 12 months
 # r1 = 2 --> it takes 7 days to recover from an unexpected failure
 # r2 = 1/(7*24) = 0.005952381 --> this is the base longevity interval (from S0 to SP), equal to 7 days
