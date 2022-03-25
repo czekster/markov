@@ -19,11 +19,12 @@ The structure of the repository is as follows:
 - `matlab`: MATLAB&reg; scripts for some solutions; 
 - `models`: a list of DTMC and CTMC models (in the format that we explored in the book, with code);
 - `prism`:  [PRISM](https://www.prismmodelchecker.org/) models (in CTMC and DTMC);
+- `spreadsheets`: MS-Excel spreadsheets reproducing the experiments (CTMC/DTMC solution, simulation);
 
 ## Challenges
-I proposed a number of challenges throughout the book. The code for all solutions are available for download here.
+I proposed a number of _challenges_ throughout the book. The code for all solutions are available for download here.
 
-One remark: to avoid repeated functions I created a folder called `project00` that has a `Makefile` and all the challenges (you may want to check the file `markov.c` to access auxiliary functions). In this project, each challenge has a `main()` function, so they work independently.
+One remark: to avoid repetitions in the code, I created a folder called `project00` that has a `Makefile` and all the challenges (you may want to check the file `markov.c` to access auxiliary functions). In this project, each challenge has a `main()` function, so they work independently.
 
 The `project01` folder contains a full project with one `main()` function and several built-in command-line options. Consult "Challenge 07" for more information about this project.
 
@@ -46,6 +47,7 @@ The following models are available (they were named **S**N where N is the number
 - `S9-maze-model-dtmc.txt`: A larger Mouse Maze model, with 9 states;
 
 You may try to run the challenges code for these models (beware that the type should match, either CTMC or DTMC).
+[Click here for more information on models](models.md)
 
 ## Numerical methods and tools
 I have explored Power Matrix, Vector-Matrix Multiplication, [PRISM](https://www.prismmodelchecker.org/) models, some MATLAB&reg; scripting, _forward_ simulation, and some MS-Excel spreadsheets.
