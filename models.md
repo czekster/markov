@@ -54,4 +54,4 @@ A six state Birth and Death model.
 A larger Mouse Maze model, with 9 states.
 
 # S26-shakespeare-ctmc.txt
-Look at [spreadsheets/Chapter04-Shakespeare-model.xlsx](spreadsheets/Chapter04-Shakespeare-model.xlsx) for more information about this model.
+Look at [spreadsheets/Chapter04-CTMC-26states-Shakespeare.xlsx](spreadsheets/Chapter04-CTMC-26states-Shakespeare.xlsx) for more information about this model.
