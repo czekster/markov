@@ -103,7 +103,7 @@ int validate_dtmc(float** m, int size, int* state) {
       if (line_sum < 0.99 && line_sum > 1.01)
          return ERR_LINE_SUM;
       else
-      if (incoming == 0 || (outgoing == 1 && m[i][i] == 1.0))
+      if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
          return ERR_ABSORBENT;
    }
    return SUCCESS;
@@ -129,7 +129,7 @@ int validate_static_dtmc(float m[LIN][COL], int* state) {
       if (line_sum < 0.99999 && line_sum > 1.00001)
          return ERR_LINE_SUM;
       else
-      if (incoming == 0 || (outgoing == 1 && m[i][i] == 1.0))
+      if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
          return ERR_ABSORBENT;
    }
    return SUCCESS;
