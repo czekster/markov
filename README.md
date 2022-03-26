@@ -49,6 +49,7 @@ The following models are available (they were named **S**N where N is the number
 - `S5-ehrenfest-dtmc.txt`: The Ehrenfest model
 - `S6-birth-and-death-ctmc.txt`: A six state Birth and Death model;
 - `S9-maze-model-dtmc.txt`: A larger Mouse Maze model, with 9 states;
+- `S26-shakespeare-ctmc.txt`: A brief analysis of one of Shakespeare's Sonnets with MC;
 
 You may try to run the challenges code for these models (beware that the type should match, either CTMC or DTMC).
 [Click here for more information on models](models.md)
