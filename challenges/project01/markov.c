@@ -67,12 +67,11 @@ int validate_mc(float** m, int size, int* state, char type) {
          if (m[j][i] != 0.0)
             incoming++;
       }
-      //printf("i=%d in=%d out=%d\n", i, incoming, outgoing);
+      //printf("type=%c i=%d in=%d out=%d m[%d][%d]=%f\n", type, i, incoming, outgoing, i, i, m[i][i]);
       if (type == 'd' && line_sum < 0.99 && line_sum > 1.01)
          return ERR_LINE_SUM;
       else
-      if (incoming == 0 || (type = 'd' && outgoing == 1 && m[i][i] == 1.0)  /*test for DTMC*/
-                        || (type = 'c' && incoming == 0 && outgoing == 1 && m[i][i] == 0.0)) /*test for CTMC*/
+      if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
          return ERR_ABSORBENT;
    }
    return SUCCESS;
