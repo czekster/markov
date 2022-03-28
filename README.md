@@ -1,11 +1,11 @@
 # Book: "Markov Chains for programmers"
+<img align="right" src="cover-imgs/cover-thumb.png">
 This book was published by Self Publishers Worldwide (another publication by the _lazy panda_ collection), and authored by Ricardo M. Czekster.
 
-The first edition was made public in 01/April/2022. 
+The first edition was made public in April/2022. 
 
 I hope you enjoy it reading as much as I've enjoyed crafting paragraphs and coding it.
 
-<img style="float: right;" src="cover-imgs/cover-thumb.png">
 You will find here supporting materials for the book I have written about Markov Chains (MC), which you may also [download here](MC-for-programmers2022.pdf).
 
 This book is a companion to [the paper I wrote about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems) a while ago, published as a pre-print in [my ResearchGate profile](https://www.researchgate.net/profile/Ricardo-Czekster).
