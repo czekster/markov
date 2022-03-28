@@ -1,4 +1,5 @@
 # Lighting model
 # state semantics: [ On Off ]
+# solution = [ 0.666667 0.333334 ]
 0 1
 2 0
