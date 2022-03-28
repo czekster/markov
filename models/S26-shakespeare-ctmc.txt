@@ -1,5 +1,6 @@
 # Shakespeare model
 # state semantics [ a b c d e f g h i j k l m n o p q r s t u v x y w z ]
+# solution = [ 0.028584 0.013879 0.030702 0.07697 0.59080 0.40619 0.049958 0.029375 0.027933 0.019823 0.032702 0.036326 0.023591 0.042497 0.045410 0.026188 0.0000 0.053764 0.061776 0.038189 0.0397710 0.033862 0.033249 0.098976 0.024526 0.037584 ]
 #
 # S o n n e t  # 1
 # f r o m  f a i r e s t  c r e a t u r e s  w e  d e s i r e  i n c r e a s e
