@@ -1,6 +1,6 @@
 # Maze Model: state order 1 2 3 | 6 5 4 | 7 8 9 - representing a 3x3 grid of cells
 # extracted from: Introduction to Probability, by Charles Miller Grinstead and J. Laurie Snell, Chapter 11, page 440
-# solution: w = [ 0.11111 on every position? ]
+# solution: w = [ 0.084860 0.125460 0.082380 0.122860 0.166540 0.126300 0.83870 0.125380 0.082350 ]
 # 1  =  2  =  3
 # ||    ||    ||
 # 6  =  5  =  4
