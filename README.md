@@ -57,6 +57,11 @@ You may try to run the challenges code for these models (beware that the type sh
 ## Numerical methods and tools
 I have explored Power Matrix, Vector-Matrix Multiplication, [PRISM](https://www.prismmodelchecker.org/) models, some MATLAB&reg; scripting, _forward_ simulation, and some MS-Excel spreadsheets.
 
+## How to cite the work
+I thank you for your attribution, and for recognising the work.
+To cite the book, please follow this suggestion:
+- Czekster, Ricardo M. **"Markov Chains for programmers"**, Available at: https://github.com/czekster/markov. April, 2022.
+
 ## Author
 Ricardo M. Czekster
 rczekster at gmail
