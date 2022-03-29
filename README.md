@@ -70,10 +70,10 @@ rczekster at gmail
 
 Ricardo is an active researcher in dependability and cyber-security.
 Please, check out his virtual presence on the following platforms:
-- [https://orcid.org/0000-0002-6636-4398](ORCID)
-- [https://www.researchgate.net/profile/Ricardo-Czekster](ResearchGate)
-- [https://dblp.uni-trier.de/pers/hd/c/Czekster:Ricardo_M=](DBLP)
-- [https://scholar.google.com.br/citations?user=M4SZcHsAAAAJ](Google Scholar profile)
-- [https://www.linkedin.com/in/ricardoczekster/](LinkedIn)
-- [https://publons.com/researcher/1440444/ricardo-m-czekster/](Publons)
-- [https://github.com/czekster/](GitHub)
+- [ORCID](https://orcid.org/0000-0002-6636-4398)
+- [ResearchGate](https://www.researchgate.net/profile/Ricardo-Czekster)
+- [DBLP](https://dblp.uni-trier.de/pers/hd/c/Czekster:Ricardo_M=)
+- [Google Scholar profile](https://scholar.google.com.br/citations?user=M4SZcHsAAAAJ)
+- [LinkedIn](https://www.linkedin.com/in/ricardoczekster/)
+- [Publons](https://publons.com/researcher/1440444/ricardo-m-czekster/)
+- [GitHub](https://github.com/czekster/)
