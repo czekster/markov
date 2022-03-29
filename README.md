@@ -4,11 +4,11 @@ This book was published by Self Publishers Worldwide (another publication by the
 
 The first edition was made public in April/2022. 
 
-"Markov Chains for programmers" is devoted to programmers at any level wanting to understand more about the underpinnings of Markov Chains and basic solution methods.
+"Markov Chains for programmers" is devoted to programmers at any level wanting to understand more about the underpinnings of Markov Chains (MC) and basic solution methods.
 
-You will find here supporting materials for the book I have written about Markov Chains (MC), which you may also [download here](MC-for-programmers2022.pdf).
+You will find here supporting materials for the book such as MATLAB scripts, PRISM models (CTMC/DTMC), and MC models, which you may also [download here](MC-for-programmers2022.pdf).
 
-This book is a companion to [the paper I wrote about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems) a while ago, published as a pre-print in [my ResearchGate profile](https://www.researchgate.net/profile/Ricardo-Czekster).
+This book is a companion to this [paper about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems), published as a pre-print in [my ResearchGate profile](https://www.researchgate.net/profile/Ricardo-Czekster).
 
 ## License
 The book is under Creative Commons (CC BY 4.0) and the code is under GPLv3.
@@ -25,9 +25,9 @@ The structure of the repository is as follows:
 - `spreadsheets`: MS-Excel spreadsheets reproducing the experiments (CTMC/DTMC solution, simulation);
 
 ## Challenges
-I proposed a number of _challenges_ throughout the book. The code for all solutions are available for download here.
+The book proposes a number of _challenges_ throughout its chapters. The code for all solutions are available for download here in this repository.
 
-One remark: to avoid repetitions in the code, I created a folder called `project00` that has a `Makefile` and all the challenges (you may want to check the file `markov.c` to access auxiliary functions). In this project, each challenge has a `main()` function, so they work independently.
+One remark: to avoid repetitions in the code, there is a folder called `project00` that has a `Makefile` and all the challenges (you may want to check the file `markov.c` to access auxiliary functions). In this project, each challenge has a `main()` function, so they work independently.
 
 The `project01` folder contains a full project with one `main()` function and several built-in command-line options. Consult "Challenge 07" for more information about this project.
 
@@ -55,8 +55,8 @@ The following models are available (they were named **S**N where N is the number
 You may try to run the challenges code for these models (beware that the type should match, either CTMC or DTMC).
 [Click here for more information on models](models.md)
 
-## Numerical methods and tools
-I have explored Power Matrix, Vector-Matrix Multiplication, [PRISM](https://www.prismmodelchecker.org/) models, some MATLAB&reg; scripting, _forward_ simulation, and some MS-Excel spreadsheets.
+## Numerical methods, models and tools
+The methods, models and tools explored in the book are Power Matrix, Vector-Matrix Multiplication, [PRISM](https://www.prismmodelchecker.org/) models, some MATLAB&reg; scripting, _forward_ simulation, and some MS-Excel spreadsheets (with basic models).
 
 ## How to cite the work
 I thank you for your attribution, and for recognising the work.
