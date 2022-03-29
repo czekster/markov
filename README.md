@@ -8,7 +8,7 @@ The first edition was made public in April/2022.
 
 You will find here supporting materials for the book such as MATLAB scripts, PRISM models (CTMC/DTMC), and MC models, which you may also [download here](MC-for-programmers2022.pdf).
 
-This book is a companion to this [paper about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems), published as a pre-print in [my ResearchGate](https://www.researchgate.net/profile/Ricardo-Czekster).
+This book is a companion to this [paper about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems), published as a pre-print in [ResearchGate](https://www.researchgate.net/profile/Ricardo-Czekster).
 
 ## License
 The book is under Creative Commons (CC BY 4.0) and the code is under GPLv3.
@@ -64,5 +64,6 @@ To cite the book, please follow this suggestion:
 - Czekster, Ricardo M. **"Markov Chains for programmers"**, Available at: https://github.com/czekster/markov. April, 2022.
 
 ## Author
+<img align="right" width="200" src="images/rmc.png">
 Ricardo M. Czekster
 rczekster at gmail
