@@ -4,7 +4,7 @@ This book was published by Self Publishers Worldwide (another publication by the
 
 The first edition was made public in April/2022. 
 
-I hope you enjoy it reading as much as I've enjoyed crafting paragraphs and coding it.
+"Markov Chains for programmers" is devoted to programmers at any level wanting to understand more about the underpinnings of Markov Chains and basic solution methods.
 
 You will find here supporting materials for the book I have written about Markov Chains (MC), which you may also [download here](MC-for-programmers2022.pdf).
 
