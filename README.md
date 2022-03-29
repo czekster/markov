@@ -39,7 +39,7 @@ The following models are available (they were named **S**N where N is the number
 
 - `S2-lighting-ctmc.txt`: The Lighting model, using rates;
 - `S2-lighting-dtmc.txt`: The Lighting model, using probabilities;
-- `S2-pushkin-dtmc.txt`: The pushkin model developed by A. A. Markov (according to Snell's book);
+- `S2-pushkin-dtmc.txt`: The pushkin model developed by A. A. Markov (according to Grinstead and Snell's book _Introduction to Probability_);
 - `S3-land-of-oz-dtmc.txt`: The land of oz model;
 - `S3-weather-belfast-dtmc.txt`: The Belfast weather model (by Stewart);
 - `S4-aging-rejuvenation-ctmc`: Software aging and rejuvenation model, CTMC;
