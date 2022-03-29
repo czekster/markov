@@ -64,5 +64,6 @@ To cite the book, please follow this suggestion:
 - Czekster, Ricardo M. **"Markov Chains for programmers"**, Available at: https://github.com/czekster/markov. April, 2022.
 
 ## Author
+<img align="right" width="200" src="images/rmc.png">
 Ricardo M. Czekster
 rczekster at gmail
