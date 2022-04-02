@@ -61,7 +61,7 @@ The methods, models and tools explored in the book are Power Matrix, Vector-Matr
 ## How to cite the work
 I thank you for your attribution, and for recognising the work.
 To cite the book, please follow this suggestion:
-- Czekster, Ricardo M. **"Markov Chains for programmers"**, Available at: https://github.com/czekster/markov. April, 2022.
+- Czekster, Ricardo M. **"Markov Chains for programmers"**, Available at: https://czekster.github.io/markov/. April, 2022.
 
 ## Author
 <img align="right" width="200" src="images/rmc.png">
