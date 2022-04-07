@@ -6,7 +6,7 @@ The first edition was made public in April/2022.
 
 "Markov Chains for programmers" is devoted to programmers at any level wanting to understand more about the underpinnings of Markov Chains (MC) and basic solution methods.
 
-You will find here supporting materials for the book such as MATLAB scripts, PRISM models (CTMC/DTMC), and MC models, which you may also [download here](MC-for-programmers2022.pdf).
+You will find here supporting materials for the book such as **C programming code** and solutions, MATLAB scripts, PRISM models (CTMC/DTMC), and MC models, which you may also [download here](MC-for-programmers2022.pdf).
 
 This book is a companion to this [paper about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems), published as a pre-print in [ResearchGate](https://www.researchgate.net/profile/Ricardo-Czekster).
 
