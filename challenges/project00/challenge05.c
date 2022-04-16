@@ -66,6 +66,8 @@ int main(int argc, char *argv[]) {
       printf("%d=%f\n", i, (float)visits[i]/samples);
 
    destroy_matrix(m, size);
+   free(filename);
+
    return EXIT_SUCCESS;
 }
 

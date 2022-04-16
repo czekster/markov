@@ -72,6 +72,8 @@ int main(int argc, char *argv[]) {
 
    destroy_matrix(q, size);
    destroy_matrix(qprime, size);
+   free(filename);
+
    return EXIT_SUCCESS;
 }
 
