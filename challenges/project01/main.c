@@ -126,6 +126,7 @@ int main(int argc, char *argv[]) {
          }
       }
       destroy_matrix(mat, size);
+      free(filename);
    }
    return EXIT_SUCCESS;
 }

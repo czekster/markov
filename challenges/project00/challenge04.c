@@ -97,6 +97,8 @@ int main(int argc, char *argv[]) {
         free(old);
       }
    }
+   free(filename);
+
    return EXIT_SUCCESS;
 }
 

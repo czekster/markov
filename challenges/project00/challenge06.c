@@ -66,6 +66,7 @@ int main(int argc, char *argv[]) {
    // deallocation
    destroy_matrix(q, size);
    destroy_matrix(m, size);
+   free(filename);
 
    return EXIT_SUCCESS;
 }
