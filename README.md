@@ -6,7 +6,7 @@ The first edition was made public in April/2022.
 
 "Markov Chains for programmers" is devoted to programmers at any level wanting to understand more about the underpinnings of Markov Chains (MC) and basic solution methods.
 
-You will find here supporting materials for the book such as **C programming code** and solutions, MATLAB scripts, PRISM models (CTMC/DTMC), and MC models, which you may also [download here](MC-for-programmers2022.pdf).
+You will find here supporting materials for the book such as **C programming code** and solutions, MATLAB scripts, PRISM models (CTMC/DTMC) for the examples provided in the book, which you may also [download here](MC-for-programmers2022.pdf).
 
 This book is a companion to this [paper about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems), published as a pre-print in [ResearchGate](https://www.researchgate.net/profile/Ricardo-Czekster).
 
@@ -30,6 +30,8 @@ The book proposes a number of _challenges_ throughout its chapters. The code for
 One remark: to avoid repetitions in the code, there is a folder called `project00` that has a `Makefile` and all the challenges (you may want to check the file `markov.c` to access auxiliary functions). In this project, each challenge has a `main()` function, so they work independently.
 
 The `project01` folder contains a full project with one `main()` function and several built-in command-line options. Consult "Challenge 07" for more information about this project.
+
+Please, let me know if you find something odd or something that needs changing. Thank you in advance.
 
 [Click here for more information about individual challenges](challenges.md)
 
