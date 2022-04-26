@@ -104,7 +104,7 @@ int validate_dtmc(float** m, int size, int* state) {
          return ERR_LINE_SUM;
       else
       if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
-         return ERR_ABSORBENT;
+         return ERR_ABSORBING;
    }
    return SUCCESS;
 }
@@ -130,7 +130,7 @@ int validate_static_dtmc(float m[LIN][COL], int* state) {
          return ERR_LINE_SUM;
       else
       if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
-         return ERR_ABSORBENT;
+         return ERR_ABSORBING;
    }
    return SUCCESS;
 }
@@ -289,7 +289,7 @@ int validate_ctmc(float** q, int size, int* state) {
          return ERR_LINE_SUM;
       else
       if (incoming == 0 || (outgoing == 1 && q[i][i] > 0.0))
-         return ERR_ABSORBENT;
+         return ERR_ABSORBING;
    }
    return SUCCESS;
 }

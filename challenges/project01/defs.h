@@ -32,7 +32,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #define SUCCESS         1
 #define ERR_NOT_SQUARE -1
 #define ERR_LINE_SUM   -2
-#define ERR_ABSORBENT  -3
+#define ERR_ABSORBING  -3
 
 #define LIMIT   1024    // line size limit
 #define MAXRUNS 10000   // number of runs

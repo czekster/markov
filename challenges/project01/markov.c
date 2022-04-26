@@ -42,8 +42,8 @@ float** validate(char* filename, char type, int* size) {
          printf("Error: line does NOT sum 1.0.\nTry again.\n");
          destroy_matrix(m, *size);
          exit(1);
-      case ERR_ABSORBENT:
-         printf("Error: chain with absorbent state (state=%d).\nTry again.\n", state);
+      case ERR_ABSORBING:
+         printf("Error: chain with absorbing state (state=%d).\nTry again.\n", state);
          destroy_matrix(m, *size);
          exit(1);
       case SUCCESS:
@@ -72,7 +72,7 @@ int validate_mc(float** m, int size, int* state, char type) {
          return ERR_LINE_SUM;
       else
       if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
-         return ERR_ABSORBENT;
+         return ERR_ABSORBING;
    }
    return SUCCESS;
 }
