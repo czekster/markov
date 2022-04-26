@@ -50,8 +50,8 @@ int main(int argc, char *argv[]) {
       case ERR_LINE_SUM:
          printf("Error: line does NOT sum 0.0.\nTry again.\n");
          exit(1);
-      case ERR_ABSORBENT:
-         printf("Error: chain with absorbent state (state=%d).\nTry again.\n", state);
+      case ERR_ABSORBING:
+         printf("Error: chain with absorbing state (state=%d).\nTry again.\n", state);
          exit(1);
       case SUCCESS:
          printf("Success: that is one well-formed ctmc matrix.\n");

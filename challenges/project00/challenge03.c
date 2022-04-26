@@ -51,8 +51,8 @@ int main(int argc, char *argv[]) {
       case ERR_NOT_SQUARE:
          printf("Error: matrix is not square (lines != columns).\nTry again.\n");
          break;
-      case ERR_ABSORBENT:
-         printf("Error: chain with absorbent state (state=%d).\nTry again.\n", state);
+      case ERR_ABSORBING:
+         printf("Error: chain with absorbing state (state=%d).\nTry again.\n", state);
          break;
       case SUCCESS:
          printf("Success: that is one well-formed dtmc matrix.\n");
