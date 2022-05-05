@@ -15,6 +15,8 @@ The book is under Creative Commons (CC BY 4.0) and the code is under GPLv3.
 
 Feel free to use it and attribute the original source.
 
+DOI link: [http://dx.doi.org/10.6084/m9.figshare.19714384.v1](http://dx.doi.org/10.6084/m9.figshare.19714384.v1)
+
 ## Folders
 The structure of the repository is as follows:
 
@@ -63,7 +65,7 @@ The methods, models and tools explored in the book are Power Matrix, Vector-Matr
 ## How to cite the work
 I thank you for your attribution, and for recognising the work.
 To cite the book, please follow this suggestion:
-- Czekster, Ricardo M. **"Markov Chains for programmers"**, Available at: https://czekster.github.io/markov/. April, 2022.
+- Czekster, Ricardo M. **"Markov Chains for programmers"**, Available at: https://czekster.github.io/markov/. DOI: http://dx.doi.org/10.6084/m9.figshare.19714384.v1, April, 2022.
 
 ## Author
 <img align="right" width="200" src="images/rmc.png">
