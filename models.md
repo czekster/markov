@@ -94,6 +94,6 @@ And the properties file named `props.prop` has the following contents:
 ```
 P=?[F=8000 x=SF]
 ```
-Meaning that it computes the probability of the FAIL state (0) after 8000 hours (333 days) consistent with the paper.
+Meaning that it computes the probability of the FAIL state (SF, or state 0) after 8000 hours (333 days) consistent with the paper.
 
 
