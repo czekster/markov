@@ -60,7 +60,7 @@ Look at [spreadsheets/Chapter04-CTMC-26states-Shakespeare.xlsx](spreadsheets/Cha
 ## PRISM MODELS
 
 # Aging & Rejuvenation
-The PRISM model is located here. More information can be found here (https://ieeexplore.ieee.org/document/9700323)[Aging and Rejuvenation Models of Load Changing Attacks in Micro-Grids].
+The PRISM model is located here. More information can be found here [Aging and Rejuvenation Models of Load Changing Attacks in Micro-Grids](https://ieeexplore.ieee.org/document/9700323).
 ```
 // OPEN PROPERTIES FILE CALLED 'aging.props' in PRISM tool
 
