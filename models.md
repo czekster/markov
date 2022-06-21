@@ -62,34 +62,37 @@ Look at [spreadsheets/Chapter04-CTMC-26states-Shakespeare.xlsx](spreadsheets/Cha
 # Aging & Rejuvenation
 The PRISM model is located here. More information can be found here [https://ieeexplore.ieee.org/document/9700323](Aging and Rejuvenation Models of Load Changing Attacks in Micro-Grids).
 ```
+// OPEN PROPERTIES FILE CALLED 'aging.props' in PRISM tool
+
 ctmc
 //TRIALS: undefined constant (experiment)
 const int TRIALS;
+
 //MAX: set the number of local states
 const int MAX = (TRIALS=0 ? 3 : TRIALS*3);
 
 const double r_PF = 1/(30*24);  // lambda
-const double r_PZ = 1/(7*24);   // rate r2
+const double r_ZP = 1/(7*24);   // rate r2
 const double r_RZ = 3;          // rate r3
 const double r_PR = 1/(7*24);   // rate r4
 const int SF = 0;               // fail state
 
 module M1
   x : [0..MAX] init 1;
-  [] (mod((x-1,3)=0) -> r_PR:(x'=x+1);
-  [] (mod((x-2,3)=0) -> r_RZ:(x'=x+1);
-  [] (mod((x-3,3)=0 & x!=0 & x!=MAX) -> r_ZP:(x'=x+1);
+  [] (mod((x-1),3)=0) -> r_PR:(x'=x+1);
+  [] (mod((x-2),3)=0) -> r_RZ:(x'=x+1);
+  [] (mod((x-3),3)=0 & x!=0 & x!=MAX) -> r_ZP:(x'=x+1);
 
   // only used when TRIALS=0
-  [] (mod((x-1,3)=0) & x!=0 & TRIALS=0 -> r_ZP:(x'=1);
+  [] (mod((x-1),3)=0) & x!=0 & TRIALS=0 -> r_ZP:(x'=1);
 
   // P-->F
-  [] (mod((x-1,3)=0) -> r_PF:(x'=SF);
+  [] (mod((x-1),3)=0) -> r_PF:(x'=SF);
 endmodule
 ```
 And the properties file named `props.prop` has the following contents:
 ```
-P=?[F=8000 x=0]
+P=?[F=8000 x=SF]
 ```
 Meaning that it computes the probability of the FAIL state (0) after 8000 hours (333 days) consistent with the paper.
 
