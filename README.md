@@ -27,7 +27,7 @@ The structure of the repository is as follows:
 - `spreadsheets`: MS-Excel spreadsheets reproducing the experiments (CTMC/DTMC solution, simulation);
 
 ## Challenges
-The book proposes a number of _challenges_ throughout its chapters. The code for all solutions are available for download here in this repository.
+The book proposes a number of _challenges_ throughout its chapters. The code for all solutions is available for download in this repository.
 
 One remark: to avoid repetitions in the code, there is a folder called `project00` that has a `Makefile` and all the challenges (you may want to check the file `markov.c` to access auxiliary functions). In this project, each challenge has a `main()` function, so they work independently.
 
