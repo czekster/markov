@@ -39,23 +39,37 @@ Please, let me know if you find something odd or something that needs changing. 
 
 
 ## Models
+The book offers many models for evaluating your projects in a textual matrix format (.txt), prism (.sm or .pm), and MATLAB (.m).
+
+### CTMC/DTMC models to run internally
 The following models are available (they were named **S**N where N is the number of states):
 
-- `S2-lighting-ctmc.txt`: The Lighting model, using rates;
-- `S2-lighting-dtmc.txt`: The Lighting model, using probabilities;
-- `S2-pushkin-dtmc.txt`: The pushkin model developed by A. A. Markov (according to Grinstead and Snell's book _Introduction to Probability_);
-- `S3-land-of-oz-dtmc.txt`: The land of oz model;
-- `S3-weather-belfast-dtmc.txt`: The Belfast weather model (by Stewart);
-- `S4-aging-rejuvenation-ctmc`: Software aging and rejuvenation model, CTMC;
-- `S4-aging-rejuvenation-dtmc`: Same (aging & rej), DTMC version;
-- `S4-generic-ctmc.txt`: The Generic model;
-- `S4-lilypad-ctmc.txt`: The Lily Pad model (frog in the pond);
-- `S4-maze-model-dtmc.txt`: The Mouse Maze model;
-- `S5-ehrenfest-dtmc.txt`: [The Ehrenfest model](https://en.wikipedia.org/wiki/Ehrenfest_model);
-- `S6-birth-and-death-ctmc.txt`: A six state Birth and Death model;
-- `S9-maze-model-dtmc.txt`: A larger Mouse Maze model, with 9 states;
-- `S26-shakespeare-ctmc.txt`: A brief analysis of one of Shakespeare's Sonnets with MC;
+- `models/S2-lighting-ctmc.txt`: The Lighting model, using rates;
+- `models/S2-lighting-dtmc.txt`: The Lighting model, using probabilities;
+- `models/S2-pushkin-dtmc.txt`: The pushkin model developed by A. A. Markov (according to Grinstead and Snell's book _Introduction to Probability_);
+- `models/S3-land-of-oz-dtmc.txt`: The land of oz model;
+- `models/S3-weather-belfast-dtmc.txt`: The Belfast weather model (by Stewart);
+- `models/S4-aging-rejuvenation-ctmc`: Software aging and rejuvenation model, CTMC;
+- `models/S4-aging-rejuvenation-dtmc`: Same (aging & rej), DTMC version;
+- `models/S4-generic-ctmc.txt`: The Generic model;
+- `models/S4-lilypad-ctmc.txt`: The Lily Pad model (frog in the pond);
+- `models/S4-maze-model-dtmc.txt`: The Mouse Maze model;
+- `models/S5-ehrenfest-dtmc.txt`: [The Ehrenfest model](https://en.wikipedia.org/wiki/Ehrenfest_model);
+- `models/S6-birth-and-death-ctmc.txt`: A six state Birth and Death model;
+- `models/S9-maze-model-dtmc.txt`: A larger Mouse Maze model, with 9 states;
+- `models/S26-shakespeare-ctmc.txt`: A brief analysis of one of Shakespeare's Sonnets with MC;
 
+### PRISM models
+- `belfast-dtmc.pm` for the Belfast weather model;
+- `generic-ctmc.sm` for the Generic model;
+- `lily-ctmc.sm` and `lily.dtmc.pm` for the Lily pad model;
+- `prism/aging.sm` and accompanying `prism/aging.props` model and property file, respectively;
+
+### MATLAB models
+- `matlab/generic_model_dtmc.m`;
+- `matlab/matlabsolution_dtmc.m`;
+
+## Challenges
 You may try to run the challenges code for these models (beware that the type should match, either CTMC or DTMC).
 [Click here for more information on models](models.md)
 
