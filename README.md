@@ -60,9 +60,9 @@ The following models are available (they were named **S**N where N is the number
 - `models/S26-shakespeare-ctmc.txt`: A brief analysis of one of Shakespeare's Sonnets with MC;
 
 ### PRISM models
-- `belfast-dtmc.pm` for the Belfast weather model;
-- `generic-ctmc.sm` for the Generic model;
-- `lily-ctmc.sm` and `lily.dtmc.pm` for the Lily pad model;
+- `prism/belfast-dtmc.pm` for the Belfast weather model;
+- `prism/generic-ctmc.sm` for the Generic model;
+- `prism/lily-ctmc.sm` and `lily.dtmc.pm` for the Lily pad model;
 - `prism/aging.sm` and accompanying `prism/aging.props` model and property file, respectively;
 
 ### MATLAB models
