@@ -49,8 +49,8 @@ The following models are available (they were named **S**N where N is the number
 - `models/S2-pushkin-dtmc.txt`: The pushkin model developed by A. A. Markov (according to Grinstead and Snell's book _Introduction to Probability_);
 - `models/S3-land-of-oz-dtmc.txt`: The land of oz model;
 - `models/S3-weather-belfast-dtmc.txt`: The Belfast weather model (by Stewart);
-- `models/S4-aging-rejuvenation-ctmc`: Software aging and rejuvenation model, CTMC;
-- `models/S4-aging-rejuvenation-dtmc`: Same (aging & rej), DTMC version;
+- `models/S4-aging-rejuvenation-ctmc.txt`: Software aging and rejuvenation model, CTMC;
+- `models/S4-aging-rejuvenation-dtmc.txt`: Same (aging & rej), DTMC version;
 - `models/S4-generic-ctmc.txt`: The Generic model;
 - `models/S4-lilypad-ctmc.txt`: The Lily Pad model (frog in the pond);
 - `models/S4-maze-model-dtmc.txt`: The Mouse Maze model;
@@ -69,7 +69,7 @@ The following models are available (they were named **S**N where N is the number
 - `matlab/generic_model_dtmc.m` (direct solution of the Generic CTMC, πQ = 0);
 - `matlab/matlabsolution_dtmc.m` (direct solution of the Belfast DTMC, πP = π);
 
-## Challenges
+## Running the models
 You may try to run the challenges code for these models (beware that the type should match, either CTMC or DTMC).
 [Click here for more information on models](models.md)
 
