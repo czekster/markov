@@ -1,0 +1,16 @@
+# Exact steady-state vectors for every model in ../models (computed independently, 6 decimals).
+# Format: <model file> <OP> <tolerance> <pi_0> <pi_1> ...
+#   OP 1 = VMM (DTMC), OP 2 = DTMC simulation, OP 4 = CTMC simulation (time = 2e6/lambda)
+#   Periodic chains (maze, ehrenfest) are checked for the non-convergence warning instead of OP 1.
+S2-lighting-dtmc.txt         1 1e-4 0.666667 0.333333
+S2-pushkin-dtmc.txt          1 1e-4 0.431922 0.568078
+S3-land-of-oz-dtmc.txt       1 1e-4 0.400000 0.200000 0.400000
+S3-weather-belfast-dtmc.txt  1 1e-4 0.762500 0.168750 0.068750
+S3-weather-belfast-dtmc.txt  2 1e-2 0.762500 0.168750 0.068750
+S9-maze-model-dtmc.txt       2 1e-2 0.083333 0.125000 0.083333 0.125000 0.166667 0.125000 0.083333 0.125000 0.083333
+S5-ehrenfest-dtmc.txt        2 1e-2 0.062500 0.250000 0.375000 0.250000 0.062500
+S2-lighting-ctmc.txt         4 1e-2 0.666667 0.333333
+S4-generic-ctmc.txt          4 1e-2 0.202353 0.567059 0.103529 0.127059
+S4-lilypad-ctmc.txt          4 1e-2 0.302450 0.243405 0.327575 0.126570
+S6-birth-and-death-ctmc.txt  4 1e-2 0.179335 0.269002 0.201751 0.151313 0.113485 0.085114
+S4-aging-rejuvenation-ctmc.txt 4 2e-2 0.504304 0.000029 0.494685 0.000982

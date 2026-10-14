@@ -1,0 +1,5 @@
+# build outputs
+*.o
+challenges/project00/challenge0[1-7]
+challenges/project01/markov
+tests/unit_tests
