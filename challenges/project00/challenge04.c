@@ -74,7 +74,10 @@ int main(int argc, char *argv[]) {
                break;
          } while (!converge0(m, size));
          printf("Number of iterations: %d\n", runs-1);
+         if (runs > MAXRUNS)
+            printf("Warning: no convergence after %d iterations (periodic chain?); result below is NOT the steady state.\n", MAXRUNS);
          print_matrix(m, size);
+         break;   // was missing: OP=0 fell through and also ran VMM
       case 1: {
         pvec = (float*) malloc(sizeof(float) * size);
         old = (float*) malloc(sizeof(float) * size);
@@ -90,6 +93,8 @@ int main(int argc, char *argv[]) {
               break;
         } while (!converge1(old, pvec, size));
         printf("Number of iterations: %d\n", runs-1);
+        if (runs > MAXRUNS)
+           printf("Warning: no convergence after %d iterations (periodic chain?); result below is NOT the steady state.\n", MAXRUNS);
         for (i = 0; i < size; i++)
            printf("%d=%f\n", i, pvec[i]);
         // free auxiliary vectors

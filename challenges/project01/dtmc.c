@@ -31,6 +31,8 @@ void solve_dtmc_power(float** m, int size) {
          break;
    } while (!converge_matrix(m, size));
    printf("Number of iterations: %d\n", runs-1);
+   if (runs > MAXRUNS)
+      printf("Warning: no convergence after %d iterations (periodic chain?); result below is NOT the steady state.\n", MAXRUNS);
    print_matrix(m, size);
 }
 
@@ -50,6 +52,8 @@ void solve_dtmc_vmm(float** m, int size) {
          break;
    } while (!converge_vector(old, pvec, size));
    printf("Number of iterations: %d\n", runs-1);
+   if (runs > MAXRUNS)
+      printf("Warning: no convergence after %d iterations (periodic chain?); result below is NOT the steady state.\n", MAXRUNS);
    for (int i = 0; i < size; i++)
       printf("%d=%f\n", i, pvec[i]);
    // free auxiliary vectors
@@ -61,7 +65,7 @@ int converge_matrix(float** m, int size) {
    int i, j;
    for (i = 0; i < size-1; i++) {
       for (j = 0; j < size; j++)
-         if (sqrt(pow(m[i][j] - m[i+1][j], 2)) > RESIDUE)
+         if (!(fabsf(m[i][j] - m[i+1][j]) <= RESIDUE))   // also catches NaN
             return 0;
    }
    return 1;
@@ -82,9 +86,13 @@ void multiply_matrix(float** m, int size) {
       }
    }
    //memcpy(m, aux, sizeof(float) * size * size);
-   for (c = 0; c < size; c++)
+   for (c = 0; c < size; c++) {
+      tot = 0.0;
       for (d = 0; d < size; d++)
-         m[c][d] = aux[c][d];
+         tot += aux[c][d];
+      for (d = 0; d < size; d++)
+         m[c][d] = aux[c][d] / tot;   // keep each row summing to 1 (float drift)
+   }
    destroy_matrix(aux, size);
 }
 

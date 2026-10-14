@@ -97,6 +97,8 @@ int validate_dtmc(float** m, int size, int* state) {
       // absorbing: only a self-loop with probability 1 (no way out)
       if (fabsf(m[i][i] - 1.0f) < EPS_ABS)
          return ERR_ABSORBING;
+      for (int j=0; j<size; j++)   // remove rounding from the file (e.g. 0.333333)
+         m[i][j] /= line_sum;
    }
    return SUCCESS;
 }
@@ -177,7 +179,7 @@ int converge0(float** m, int size) {
    int i, j;
    for (i = 0; i < size-1; i++) {
       for (j = 0; j < size; j++)
-         if (sqrt(pow(m[i][j] - m[i+1][j], 2)) > RESIDUE)
+         if (!(fabsf(m[i][j] - m[i+1][j]) <= RESIDUE))   // also catches NaN
             return 0;
    }
    return 1;
@@ -198,9 +200,13 @@ void multiply0(float** m, int size) {
       }
    }
    //memcpy(m, aux, sizeof(float) * size * size);
-   for (c = 0; c < size; c++)
+   for (c = 0; c < size; c++) {
+      tot = 0.0;
       for (d = 0; d < size; d++)
-         m[c][d] = aux[c][d];
+         tot += aux[c][d];
+      for (d = 0; d < size; d++)
+         m[c][d] = aux[c][d] / tot;   // keep each row summing to 1 (float drift)
+   }
    destroy_matrix(aux, size);
 }
 
@@ -332,16 +338,18 @@ float exponential(float n) {
 /*This function will select the next state: the lowest value drawn from exponential distr. other than zero.*/
 int lowest_not_zero(float* qline, int size, float* curr_time) {
    float r;
-   float lowest = RAND_MAX; // set the lowest to a large number
+   float lowest = INFINITY; // smallest time drawn so far
    int nextstate = 0;
    for (int i = 0; i < size; i++) {
+      if (qline[i] <= 0.0f)  // no transition, nothing to draw
+         continue;
       r = exponential(qline[i]);
-      if (r < lowest && r != 0.0) {
+      if (r < lowest) {
          lowest = r;
          nextstate = i;
-         *curr_time += r;     // updates time
       }
    }
+   *curr_time += lowest;     // only the winner's time elapses
    return nextstate;
 }
 

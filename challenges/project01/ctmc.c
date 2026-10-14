@@ -77,16 +77,18 @@ float** convert2ctmc_prime(float** q, int size) {
 /*This function will select the next state: the lowest value drawn from exponential distr. other than zero.*/
 int lowest_not_zero(float* qline, int size, float* curr_time) {
    float r;
-   float lowest = RAND_MAX; // set the lowest to a large number
+   float lowest = INFINITY; // smallest time drawn so far
    int nextstate = 0;
    for (int i = 0; i < size; i++) {
+      if (qline[i] <= 0.0f)  // no transition, nothing to draw
+         continue;
       r = exponential(qline[i]);
-      if (r < lowest && r != 0.0) {
+      if (r < lowest) {
          lowest = r;
          nextstate = i;
-         *curr_time += r;     // updates time
       }
    }
+   *curr_time += lowest;     // only the winner's time elapses
    return nextstate;
 }
 

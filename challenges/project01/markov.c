@@ -67,6 +67,8 @@ int validate_mc(float** m, int size, int* state, char type) {
          // absorbing: only a self-loop with probability 1
          if (fabsf(m[i][i] - 1.0f) < EPS_ABS)
             return ERR_ABSORBING;
+         for (int j=0; j<size; j++)   // remove rounding from the file (e.g. 0.333333)
+            m[i][j] /= line_sum;
       }
       else
       if (line_sum < EPS_ABS)   // CTMC: no outgoing rate
