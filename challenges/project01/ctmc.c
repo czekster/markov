@@ -39,25 +39,24 @@ float** convert2dtmc(float** q, int size) {
    float** d;
    d = create_matrix(size);
 
-   float max = discover_max(q, size);
+   // uniformised DTMC: M' = I + Q/lambda
+   float lambda = discover_lambda(q, size);
    for (int i=0; i<size; i++) {
       for (int j=0; j<size; j++) {
-            d[i][j] = (i==j?1:0) - q[i][j]/max;
+            d[i][j] = (i==j?1:0) + q[i][j]/lambda;
       }
    }
    return d;
 }
 
-float discover_max(float** q, int size) {
-   float max=0.0;
+// uniformisation constant: lambda = max_i |q_ii| (largest exit rate)
+float discover_lambda(float** q, int size) {
+   float lambda = 0.0f;
    for (int i=0; i<size; i++) {
-      for (int j=i; j<size; j++) {
-         if (i == j && abs(q[i][j]) > max) {
-            max = abs(q[i][j]);
-         }
-      }
+      if (fabsf(q[i][i]) > lambda)
+         lambda = fabsf(q[i][i]);
    }
-   return (max*-1);
+   return lambda;
 }
 
 /// simulation of CTMC
@@ -65,10 +64,11 @@ float discover_max(float** q, int size) {
 float** convert2ctmc_prime(float** q, int size) {
    float** qprime;
    qprime = create_matrix(size);
-   float max = discover_max(q, size);
+   // Q' = Q + lambda*I
+   float lambda = discover_lambda(q, size);
    for (int i=0; i<size; i++) {
       for (int j=0; j<size; j++) {
-         qprime[i][j] = q[i][j] - (max * (i==j?1:0));
+         qprime[i][j] = q[i][j] + (lambda * (i==j?1:0));
       }
    }
    return qprime;

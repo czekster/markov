@@ -87,23 +87,15 @@ int open_model(char* file, float **m) {
 
 int validate_dtmc(float** m, int size, int* state) {
    for (int i=0; i<size; i++) {
-      int incoming = 0;
-      int outgoing = 0;
-      float line_sum = 0.0;
+      float line_sum = 0.0f;
       *state = i;
 
-      for (int j=0; j<size; j++) {
+      for (int j=0; j<size; j++)
          line_sum += m[i][j];
-         if (m[i][j] != 0.0)
-            outgoing++;
-         if (m[j][i] != 0.0)
-            incoming++;
-      }
-      //printf("i=%d in=%d out=%d\n", i, incoming, outgoing);
-      if (line_sum < 0.99 && line_sum > 1.01)
+      if (fabsf(line_sum - 1.0f) > EPS_SUM)
          return ERR_LINE_SUM;
-      else
-      if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
+      // absorbing: only a self-loop with probability 1 (no way out)
+      if (fabsf(m[i][i] - 1.0f) < EPS_ABS)
          return ERR_ABSORBING;
    }
    return SUCCESS;
@@ -113,23 +105,15 @@ int validate_static_dtmc(float m[LIN][COL], int* state) {
    if (LIN != COL)
       return ERR_NOT_SQUARE;
    for (int i=0; i<LIN; i++) {
-      int incoming = 0;
-      int outgoing = 0;
-      float line_sum = 0.0;
+      float line_sum = 0.0f;
       *state = i;
 
-      for (int j=0; j<COL; j++) {
+      for (int j=0; j<COL; j++)
          line_sum += m[i][j];
-         if (m[i][j] != 0.0)
-            outgoing++;
-         if (m[j][i] != 0.0)
-            incoming++;
-      }
-      //printf("i=%d in=%d out=%d\n", i, incoming, outgoing);
-      if (line_sum < 0.99999 && line_sum > 1.00001)
+      if (fabsf(line_sum - 1.0f) > EPS_SUM)
          return ERR_LINE_SUM;
-      else
-      if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
+      // absorbing: only a self-loop with probability 1 (no way out)
+      if (fabsf(m[i][i] - 1.0f) < EPS_ABS)
          return ERR_ABSORBING;
    }
    return SUCCESS;
@@ -272,23 +256,16 @@ void dtmc_simulator(float** m, int size, int samples, int* results) {
 // challenge 06
 int validate_ctmc(float** q, int size, int* state) {
    for (int i=0; i<size; i++) {
-      int incoming = 0;
-      int outgoing = 0;
-      float line_sum = 0.0;
+      float line_sum = 0.0f;
       *state = i;
 
-      for (int j=0; j<size; j++) {
+      for (int j=0; j<size; j++)
          line_sum += q[i][j];
-         if (q[i][j] != 0.0)
-            outgoing++;
-         if (q[j][i] != 0.0)
-            incoming++;
-      }
-      //printf("i=%d in=%d out=%d\n", i, incoming, outgoing);
-      if (line_sum != 0.0)
+      // rows of an infinitesimal generator sum to 0 (relative tolerance)
+      if (fabsf(line_sum) > EPS_SUM * (1.0f + fabsf(q[i][i])))
          return ERR_LINE_SUM;
-      else
-      if (incoming == 0 || (outgoing == 1 && q[i][i] > 0.0))
+      // absorbing: no outgoing rate, i.e., q_ii == 0
+      if (fabsf(q[i][i]) < EPS_ABS)
          return ERR_ABSORBING;
    }
    return SUCCESS;
@@ -311,25 +288,24 @@ float** convert2dtmc(float** q, int size) {
    float** d;
    d = create_matrix(size);
 
-   float max = discover_max(q, size);
+   // uniformised DTMC: M' = I + Q/lambda
+   float lambda = discover_lambda(q, size);
    for (int i=0; i<size; i++) {
       for (int j=0; j<size; j++) {
-            d[i][j] = (i==j?1:0) - q[i][j]/max;
+            d[i][j] = (i==j?1:0) + q[i][j]/lambda;
       }
    }
    return d;
 }
 
-float discover_max(float** q, int size) {
-   float max=0.0;
+// uniformisation constant: lambda = max_i |q_ii| (largest exit rate)
+float discover_lambda(float** q, int size) {
+   float lambda = 0.0f;
    for (int i=0; i<size; i++) {
-      for (int j=i; j<size; j++) {
-         if (i == j && abs(q[i][j]) > max) {
-            max = abs(q[i][j]);
-         }
-      }
+      if (fabsf(q[i][i]) > lambda)
+         lambda = fabsf(q[i][i]);
    }
-   return (max*-1);
+   return lambda;
 }
 
 // challenge 07
@@ -337,10 +313,11 @@ float discover_max(float** q, int size) {
 float** convert2ctmc_prime(float** q, int size) {
    float** qprime;
    qprime = create_matrix(size);
-   float max = discover_max(q, size);
+   // Q' = Q + lambda*I
+   float lambda = discover_lambda(q, size);
    for (int i=0; i<size; i++) {
       for (int j=0; j<size; j++) {
-         qprime[i][j] = q[i][j] - (max * (i==j?1:0));
+         qprime[i][j] = q[i][j] + (lambda * (i==j?1:0));
       }
    }
    return qprime;

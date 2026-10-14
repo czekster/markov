@@ -33,6 +33,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #define ERR_NOT_SQUARE -1
 #define ERR_LINE_SUM   -2
 #define ERR_ABSORBING  -3
+#define EPS_SUM  1e-4f  // tolerance for row sums (model files use 5 decimals)
+#define EPS_ABS  1e-6f  // tolerance for absorbing-state test m[i][i] == 1
 
 #define LIMIT   1024    // line size limit
 #define MAXRUNS 10000   // number of runs
@@ -74,7 +76,7 @@ extern void multiply_vector(float*, float**, int);
 ////// 6. ctmc.c
 extern void fix_ctmc(float**, int);
 extern float** convert2dtmc(float**, int);
-extern float discover_max(float**, int);
+extern float discover_lambda(float**, int);
 // simulation
 float** convert2ctmc_prime(float**, int);
 extern int ctmc_simulator(float**, int, float, int*);

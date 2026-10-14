@@ -47,7 +47,7 @@ float** validate(char* filename, char type, int* size) {
          destroy_matrix(m, *size);
          exit(1);
       case SUCCESS:
-         printf("Success: that is one well-formed dtmc matrix.\n");
+         printf("Success: that is one well-formed %s matrix.\n", type == 'd' ? "dtmc" : "ctmc");
          break;
    }
    return m;
@@ -55,23 +55,21 @@ float** validate(char* filename, char type, int* size) {
 
 int validate_mc(float** m, int size, int* state, char type) {
    for (int i=0; i<size; i++) {
-      int incoming = 0;
-      int outgoing = 0;
-      float line_sum = 0.0;
+      float line_sum = 0.0f;   // DTMC: whole row; CTMC: off-diagonal rates
       *state = i;
 
-      for (int j=0; j<size; j++) {
-         line_sum += m[i][j];
-         if (m[i][j] != 0.0)
-            outgoing++;
-         if (m[j][i] != 0.0)
-            incoming++;
+      for (int j=0; j<size; j++)
+         if (type == 'd' || i != j)
+            line_sum += m[i][j];
+      if (type == 'd') {
+         if (fabsf(line_sum - 1.0f) > EPS_SUM)
+            return ERR_LINE_SUM;
+         // absorbing: only a self-loop with probability 1
+         if (fabsf(m[i][i] - 1.0f) < EPS_ABS)
+            return ERR_ABSORBING;
       }
-      //printf("type=%c i=%d in=%d out=%d m[%d][%d]=%f\n", type, i, incoming, outgoing, i, i, m[i][i]);
-      if (type == 'd' && line_sum < 0.99 && line_sum > 1.01)
-         return ERR_LINE_SUM;
       else
-      if ((outgoing == 1 && m[i][i] > 0) || (incoming == 1 && outgoing == 0))
+      if (line_sum < EPS_ABS)   // CTMC: no outgoing rate
          return ERR_ABSORBING;
    }
    return SUCCESS;

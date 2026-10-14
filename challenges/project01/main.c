@@ -29,7 +29,7 @@ void echo_help() {
    printf("   0 Solve DTMC - Power Matrix\n");
    printf("   1 Solve DTMC - Vector-Matrix Multiplication\n");
    printf("   2 Simulate DTMC (pass <SAMPLES> parameter!)\n");
-   printf("   3 Convert CTMC to Embedded DTMC\n");
+   printf("   3 Convert CTMC to Uniformised DTMC\n");
    printf("   4 Simulate CTMC (pass <TIME> parameter!)\n");
 }
 
@@ -88,12 +88,12 @@ int main(int argc, char *argv[]) {
             break;
          }
          case 3: {
-            printf("Converting CTMC to embedded DTMC.\n");
+            printf("Converting CTMC to uniformised DTMC.\n");
             fix_ctmc(mat, size);   // destroy main diagonal and replace with negative sum of line (except diagonal)
             float** m = convert2dtmc(mat, size);
             printf("CTMC:\n");
             print_matrix(mat, size);
-            printf("(embedded) DTMC:\n");
+            printf("(uniformised) DTMC:\n");
             print_matrix(m, size);
             destroy_matrix(m, size);
             break;

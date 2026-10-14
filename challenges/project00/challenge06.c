@@ -41,8 +41,8 @@ int main(int argc, char *argv[]) {
    }
    int state = 0;
    fix_ctmc(q, size);   // destroy main diagonal and replace with negative sum of line (except diagonal)
-   float max = discover_max(q, size);
-   printf("max=%f\n", max);
+   float lambda = discover_lambda(q, size);
+   printf("lambda=%f\n", lambda);
    float** m = convert2dtmc(q, size);
 
    result = validate_ctmc(q, size, &state);
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
 /*
 $ ./challenge06 ctmc.txt 
 Working with file: ctmc.txt
-max=-27.000000
+lambda=27.000000
 Success: that is one well-formed ctmc matrix.
 CTMC:
 -9.000000 2.000000 3.000000 4.000000 

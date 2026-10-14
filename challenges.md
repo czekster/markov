@@ -25,7 +25,7 @@ I explored here two numerical methods for DTMC:
 Implementation of a DTMC simulator using uniformly distributed pseudo-random numbers.
 
 ## Challenge 06
-Conversion of CTMC to its embedded DTMC counterpart. Discover the maximum element of a CTMC.
+Conversion of CTMC to its uniformised DTMC counterpart, M' = I + Q/lambda, where lambda = max_i |q_ii| (the largest exit rate).
 
 ## Challenge 07
 Simulation of a CTMC.

@@ -12,7 +12,7 @@ void echo_help() {
    printf("   0 Solve DTMC - Power Matrix\n");
    printf("   1 Solve DTMC - Vector-Matrix Multiplication\n");
    printf("   2 Simulate DTMC (pass <SAMPLES> parameter!)\n");
-   printf("   3 Convert CTMC to Embedded DTMC\n");
+   printf("   3 Convert CTMC to Uniformised DTMC\n");
    printf("   4 Simulate CTMC (pass <TIME> parameter!)\n");
 }
 ```
