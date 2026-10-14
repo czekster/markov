@@ -66,7 +66,7 @@ The following models are available (they were named **S**N where N is the number
 - `prism/aging.sm` and accompanying `prism/aging.props` model and property file, respectively;
 
 ### MATLAB models
-- `matlab/generic_model_dtmc.m` (direct solution of the Generic CTMC, πQ = 0);
+- `matlab/generic_model_ctmc.m` (direct solution of the Generic CTMC, πQ = 0);
 - `matlab/matlabsolution_dtmc.m` (direct solution of the Belfast DTMC, πP = π);
 
 ## Running the models
