@@ -2,7 +2,7 @@
 [<img align="right" src="cover-imgs/cover-thumb.png">](MC-for-programmers2026.pdf)
 This book was published by Self Publishers Worldwide (another publication by the _lazy panda_ collection), and authored by Ricardo M. Czekster.
 
-The second edition was made public in October/2026. It fixes errors and typos found in the first edition (April/2022) and adds material on uniformised and embedded DTMC; LLM-assisted passages are marked in grey. The first edition remains available [here](MC-for-programmers2022.pdf).
+The second edition was made public in October/2026. It fixes errors and typos found in the first edition (April/2022) and adds material on uniformised and embedded DTMC; LLM-assisted passages are marked in grey.
 
 "Markov Chains for programmers" is devoted to programmers at any level wanting to understand more about the underpinnings of Markov Chains (MC) and basic solution methods.
 
