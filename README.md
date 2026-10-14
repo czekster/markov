@@ -2,7 +2,7 @@
 [<img align="right" src="cover-imgs/cover-thumb.png">](MC-for-programmers2022.pdf)
 This book was published by Self Publishers Worldwide (another publication by the _lazy panda_ collection), and authored by Ricardo M. Czekster.
 
-The first edition was made public in April/2022. 
+The first edition was made public in April/2022. A second edition, with corrections and new material on uniformised and embedded DTMC, is in preparation.
 
 "Markov Chains for programmers" is devoted to programmers at any level wanting to understand more about the underpinnings of Markov Chains (MC) and basic solution methods.
 
@@ -62,16 +62,25 @@ The following models are available (they were named **S**N where N is the number
 ### PRISM models
 - `prism/belfast-dtmc.pm` for the Belfast weather model;
 - `prism/generic-ctmc.sm` for the Generic model;
-- `prism/lily-ctmc.sm` and `lily.dtmc.pm` for the Lily pad model;
+- `prism/lily-ctmc.sm` and `prism/lily-dtmc.pm` for the Lily pad model;
 - `prism/aging.sm` and accompanying `prism/aging.props` model and property file, respectively;
 
 ### MATLAB models
-- `matlab/generic_model_dtmc.m`;
-- `matlab/matlabsolution_dtmc.m`;
+- `matlab/generic_model_dtmc.m` (direct solution of the Generic CTMC, πQ = 0);
+- `matlab/matlabsolution_dtmc.m` (direct solution of the Belfast DTMC, πP = π);
 
 ## Challenges
 You may try to run the challenges code for these models (beware that the type should match, either CTMC or DTMC).
 [Click here for more information on models](models.md)
+
+## Tests
+All C code is covered by unit and model tests (exact steady-state solutions for every model in `models/`):
+
+```bash
+make -C tests
+```
+
+To run the tests automatically before every commit, enable the hook once per clone with `git config core.hooksPath .githooks`. GitHub Actions also runs them on every push. See [tests/README.md](tests/README.md) for details.
 
 ## Numerical methods, models and tools
 The methods, models and tools explored in the book are Power Matrix, Vector-Matrix Multiplication, [PRISM](https://www.prismmodelchecker.org/) models, some MATLAB&reg; scripting, _forward_ simulation, and some MS-Excel spreadsheets (with basic models).
