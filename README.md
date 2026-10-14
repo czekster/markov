@@ -1,12 +1,12 @@
 # Book: "Markov Chains for programmers"
-[<img align="right" src="cover-imgs/cover-thumb.png">](MC-for-programmers2022.pdf)
+[<img align="right" src="cover-imgs/cover-thumb.png">](MC-for-programmers2026.pdf)
 This book was published by Self Publishers Worldwide (another publication by the _lazy panda_ collection), and authored by Ricardo M. Czekster.
 
-The first edition was made public in April/2022. A second edition, with corrections and new material on uniformised and embedded DTMC, is in preparation.
+The second edition was made public in October/2026. It fixes errors and typos found in the first edition (April/2022) and adds material on uniformised and embedded DTMC; LLM-assisted passages are marked in grey. The first edition remains available [here](MC-for-programmers2022.pdf).
 
 "Markov Chains for programmers" is devoted to programmers at any level wanting to understand more about the underpinnings of Markov Chains (MC) and basic solution methods.
 
-You will find here supporting materials for the book such as **C programming code** and solutions, MATLAB scripts, PRISM models (CTMC/DTMC) for the examples provided in the book, which you may also [download here](MC-for-programmers2022.pdf).
+You will find here supporting materials for the book such as **C programming code** and solutions, MATLAB scripts, PRISM models (CTMC/DTMC) for the examples provided in the book, which you may also [download here](MC-for-programmers2026.pdf).
 
 This book is a companion to this [paper about Performance Evaluation](https://www.researchgate.net/publication/337623607_Introduction_to_Performance_Evaluation_of_Systems), published as a pre-print in [ResearchGate](https://www.researchgate.net/profile/Ricardo-Czekster).
 
@@ -88,7 +88,7 @@ The methods, models and tools explored in the book are Power Matrix, Vector-Matr
 ## How to cite the work
 I thank you for your attribution, and for recognising the work.
 To cite the book, please follow this suggestion:
-- Czekster, Ricardo M. **"Markov Chains for programmers"**, Available at: https://czekster.github.io/markov/. DOI: http://dx.doi.org/10.6084/m9.figshare.19714384.v2, April, 2022.
+- Czekster, Ricardo M. **"Markov Chains for programmers"**, 2nd edition. Available at: https://czekster.github.io/markov/. DOI: http://dx.doi.org/10.6084/m9.figshare.19714384.v2, October, 2026.
 
 ## Author
 <img align="right" width="200" src="images/rmc.png">
